@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 using namespace std;
 
 int getGCD(int a, int b) {
@@ -6,7 +7,7 @@ int getGCD(int a, int b) {
 		return b;
 	if (b == 0)
 		return a;
-	while (a != b) {
+	while (a % b != 0) {
 		if (a > b) {
 			if (a % b == 0)
 				return b;
@@ -18,7 +19,7 @@ int getGCD(int a, int b) {
 			b = b % a;
 		}
 	}
-	return a;
+	return b;
 }
 
 int getLCM(int a, int b) {
@@ -115,6 +116,43 @@ Day getNextday(Day today) {
 	return nextday;
 }
 
+typedef struct PhanSo {
+	int mau, tu;
+};
+
+bool checkPhanSo(PhanSo p) {
+	if (p.mau == 0) {
+		cout << "Mau so khong the bang 0, de nghi nhap lai: ";
+		return false;
+	}
+	return true;
+}
+
+PhanSo getOptPS(PhanSo p) {
+	int ucln;
+	PhanSo ps_reduced;
+	if (p.tu * p.mau > 0) {
+		if (p.tu < 0)
+			p.tu *= -1;
+		if (p.mau < 0)
+			p.mau *= -1;
+		ucln = getGCD(p.tu, p.mau);
+		ps_reduced.tu = p.tu / ucln;
+		ps_reduced.mau = p.mau / ucln;
+		return ps_reduced;
+	}
+	else {
+		if (p.tu < 0)
+			p.tu *= -1;
+		if (p.mau < 0)
+			p.mau *= -1;
+		ucln = getGCD(p.tu, p.mau);
+		ps_reduced.tu = -p.tu / ucln;
+		ps_reduced.mau = p.mau / ucln;
+		return ps_reduced;
+	}
+}
+
 int main() {
 	//cau 1
 	//Viet chuong trinh nhap vao hai so nguyen duong a va b. Tim uoc so chung lon nhat cua a va b.
@@ -149,10 +187,10 @@ int main() {
 				cout << n << "\n\n";
 		}
 	}
-	//	//Cach 2
-	//{
+	////	//Cach 2
+	////{
 
-	//}
+	////}
 	//Cau 4
 	//Viet chuong trinh nhap vao mot ngay. Tim ngay ke tiep va xuat ket qua
 	{
@@ -165,7 +203,21 @@ int main() {
 		}
 		Day nextday;
 		nextday = getNextday(today);
-		cout << "Ngay tiep theo la: " << nextday.day << "\/" << nextday.month << "\/" << nextday.year << "\n\n";
+		cout << "Ngay tiep theo la: " << nextday.day << "/" << nextday.month << "/" << nextday.year << "\n\n";
+	}
+	//Cau 5
+	//Viet chuong trinh nhap vao mot phan so, rut gon phan so va xuat ket qua
+	{
+		PhanSo ps;
+		cout << "Nhap tu va mau cua phan so: ";
+		cin >> ps.tu >> ps.mau;
+		while (!checkPhanSo(ps)) {
+			cin >> ps.tu >> ps.mau;
+		}
+		if (ps.tu == 0)
+			cout << "Phan so sau khi rut gon la: " << ps.tu << "\n\n";
+		else
+			cout << "Phan so sau khi rut gon la: " << getOptPS(ps).tu << "/" << getOptPS(ps).mau << "\n\n";
 	}
 	system("pause");
 	return 0;
