@@ -9,7 +9,7 @@ typedef struct Matrix {
 void createMatrix(Matrix& M) {
 	M.data = new double* [M.m];
 	for (int i = 0; i < M.m; ++i)
-		M.data[i] = new double[M.n];
+		M.data[i] = new double[M.n] {0};
 }
 
 void deleteMatrix(Matrix& M) {
@@ -56,6 +56,18 @@ Matrix differMatrixes(Matrix A, Matrix B) {
 	return differMatrix;
 }
 
+Matrix productTwoMatrixes(Matrix A, Matrix B) {
+	Matrix productMatrix;
+	productMatrix.m = A.m;
+	productMatrix.n = B.n;
+	createMatrix(productMatrix);
+	for (int i = 0; i < A.m; ++i)
+		for (int j = 0; j < B.n; ++j)
+			for (int l = 0; l < A.n; ++l)
+				productMatrix.data[i][j] += A.data[i][l] * B.data[l][j];
+	return productMatrix;
+}
+
 
 int main() {
 	//Chuong trinh 1
@@ -87,6 +99,13 @@ int main() {
 			cout << "Khong the tinh hieu hai ma tran nay!\n";
 		else
 			printMatrix(differMatrixes(A, B));
+
+		//Tich cua hai ma tran
+		cout << "Tich cua hai ma tran la:\n";
+		if (A.n != B.m)
+			cout << "Khong the tinh tich cua hai ma tran nay!\n";
+		else
+			printMatrix(productTwoMatrixes(A, B));
 
 		//Gia phong vung nho
 		deleteMatrix(A);
