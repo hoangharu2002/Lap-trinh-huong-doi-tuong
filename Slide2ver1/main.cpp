@@ -95,7 +95,16 @@ int getGCD(int a, int b) {
 	return a;
 }
 
+void getFractionData(PhanSo &p) {
+	cout << "Nhap tu so: ";
+	cin >> p.tu;
+	cout << "Nhap mau so: ";
+	cin >> p.mau;
+}
 
+void printFraction(PhanSo p) {
+	cout << p.tu << "/" << p.mau << " ";
+}
 
 bool checkFraction(PhanSo p) {
 	if (p.mau == 0)
@@ -123,45 +132,45 @@ void reduceFraction(PhanSo &p) {
 int main() {
 	//Chuong trinh 1
 	//Viet chuong trinh nhap vao 2 ma tran. Tinh tong, hieu, tich hai ma tran da nhap va in ket qua ra man hinh.
-	{
-		Matrix A, B;
-		//Khoi tao ma tran A
-		cout << "Nhap so hang va so cot cua ma tran: ";
-		cin >> A.m >> A.n;
-		createMatrix(A);
-		getMatrixData(A);
+	//{
+	//	Matrix A, B;
+	//	//Khoi tao ma tran A
+	//	cout << "Nhap so hang va so cot cua ma tran: ";
+	//	cin >> A.m >> A.n;
+	//	createMatrix(A);
+	//	getMatrixData(A);
 
-		//Khoi tao ma tran B
-		cout << "Nhap so hang va so cot cua ma tran: ";
-		cin >> B.m >> B.n;
-		createMatrix(B);
-		getMatrixData(B);
+	//	//Khoi tao ma tran B
+	//	cout << "Nhap so hang va so cot cua ma tran: ";
+	//	cin >> B.m >> B.n;
+	//	createMatrix(B);
+	//	getMatrixData(B);
 
-		//Tong cua hai ma tran
-		cout << "Tong cua hai ma tran tren:\n";
-		if (A.m != B.m || A.n != B.n)
-			cout << "Khong the tinh tong hai ma tran nay!\n";
-		else
-			printMatrix(sumMatrixes(A, B));
+	//	//Tong cua hai ma tran
+	//	cout << "Tong cua hai ma tran tren:\n";
+	//	if (A.m != B.m || A.n != B.n)
+	//		cout << "Khong the tinh tong hai ma tran nay!\n";
+	//	else
+	//		printMatrix(sumMatrixes(A, B));
 
-		//Hieu cua hai ma tran
-		cout << "Hieu cua hai ma tran tren:\n";
-		if (A.m != B.m || A.n != B.n)
-			cout << "Khong the tinh hieu hai ma tran nay!\n";
-		else
-			printMatrix(differMatrixes(A, B));
+	//	//Hieu cua hai ma tran
+	//	cout << "Hieu cua hai ma tran tren:\n";
+	//	if (A.m != B.m || A.n != B.n)
+	//		cout << "Khong the tinh hieu hai ma tran nay!\n";
+	//	else
+	//		printMatrix(differMatrixes(A, B));
 
-		//Tich cua hai ma tran
-		cout << "Tich cua hai ma tran la:\n";
-		if (A.n != B.m)
-			cout << "Khong the tinh tich cua hai ma tran nay!\n";
-		else
-			printMatrix(productTwoMatrixes(A, B));
+	//	//Tich cua hai ma tran
+	//	cout << "Tich cua hai ma tran la:\n";
+	//	if (A.n != B.m)
+	//		cout << "Khong the tinh tich cua hai ma tran nay!\n";
+	//	else
+	//		printMatrix(productTwoMatrixes(A, B));
 
-		//Gia phong vung nho
-		deleteMatrix(A);
-		deleteMatrix(B);
-	}
+	//	//Gia phong vung nho
+	//	deleteMatrix(A);
+	//	deleteMatrix(B);
+	//}
 	//Chuong trinh 2
 	//Viet chuong trinh cho phep nhap mot day phan so. Cai dat ham tinh tong cac phan so va tim phan so lon nhat.
 	{
@@ -169,6 +178,16 @@ int main() {
 		cout << "Hay nhap so luong phan tu cua mang phan so: ";
 		cin >> n;
 		PhanSo* ps = new PhanSo[n];
+		//Nhap cac phan tu trong mang phan so
+		for (int i = 0; i < n; ++i) {
+			cout << "Nhap phan so thu " << i << ":\n";
+			getFractionData(ps[i]);
+		}
+		cout << "Xuat mang phan so:\n";
+		for (int i = 0; i < n; ++i) {
+			printFraction(ps[i]);
+		}
+		cout << endl;
 
 		delete[]ps;
 	}
