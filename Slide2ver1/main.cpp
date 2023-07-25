@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//Ham chuong trinh 1
 typedef struct Matrix {
 	unsigned int m, n;
 	double** data;
@@ -67,6 +68,33 @@ Matrix productTwoMatrixes(Matrix A, Matrix B) {
 				productMatrix.data[i][j] += A.data[i][l] * B.data[l][j];
 	return productMatrix;
 }
+//Ham chuong trinh 1
+
+//Ham chuong trinh 2
+typedef struct PhanSo {
+	int tu, mau;
+};
+
+int getGCD(int a, int b) {
+	if (a == 0)
+		return b;
+	if (b == 0)
+		return a;
+	while (a != b) {
+		if (a > b) {
+			if (a % b == 0)
+				return b;
+			a %= b;
+		}
+		else {
+			if (b % a == 0)
+				return a;
+			b %= a;
+		}
+	}
+	return a;
+}
+//Ham chuong trinh 2
 
 
 int main() {
@@ -110,6 +138,11 @@ int main() {
 		//Gia phong vung nho
 		deleteMatrix(A);
 		deleteMatrix(B);
+	}
+	//Chuong trinh 2
+	//Viet chuong trinh cho phep nhap mot day phan so. Cai dat ham tinh tong cac phan so va tim phan so lon nhat.
+	{
+
 	}
 	cout << "\n\n";
 	system("pause");
