@@ -95,13 +95,6 @@ int getGCD(int a, int b) {
 	return a;
 }
 
-void getFractionData(PhanSo &p) {
-	cout << "Nhap tu so: ";
-	cin >> p.tu;
-	cout << "Nhap mau so: ";
-	cin >> p.mau;
-}
-
 void printFraction(PhanSo p) {
 	cout << p.tu << "/" << p.mau << " ";
 }
@@ -112,19 +105,51 @@ bool checkFraction(PhanSo p) {
 	return true;
 }
 
+void getFractionData(PhanSo& p) {
+	cout << "Nhap tu so: ";
+	cin >> p.tu;
+	cout << "Nhap mau so: ";
+	cin >> p.mau;
+	while (!checkFraction(p)) {
+		cout << "Phan so vua nhap khong hop le! Nhap lai:\n";
+		cout << "Nhap tu so: ";
+		cin >> p.tu;
+		cout << "Nhap mau so: ";
+		cin >> p.mau;
+	}
+}
+
 void reduceFraction(PhanSo &p) {
+	if (p.tu == 0)
+		return;
 	if (p.tu * p.mau > 0) {
 		if (p.tu < 0)
 			p.tu *= -1;
 		if (p.mau < 0)
 			p.mau *= -1;
-		if (p.tu == 0)
-			return;
 		int ucln = getGCD(p.tu, p.mau);
 		p.tu /= ucln;
 		p.mau /= ucln;
 		return;
 	}
+	else {
+		if (p.tu < 0)
+			p.tu *= -1;
+		if (p.mau < 0)
+			p.mau *= -1;
+		int ucln = getGCD(p.tu, p.mau);
+		p.tu /= -ucln;
+		p.mau /= ucln;
+		return;
+	}
+}
+
+PhanSo sumFractions(PhanSo ps1, PhanSo ps2) {
+	PhanSo sumFrac;
+	sumFrac.mau = ps1.mau * ps2.mau;
+	sumFrac.tu = ps1.tu * ps2.mau + ps2.tu * ps1.mau;
+	reduceFraction(sumFrac);
+	return sumFrac;
 }
 //Ham chuong trinh 2
 
@@ -188,6 +213,13 @@ int main() {
 			printFraction(ps[i]);
 		}
 		cout << endl;
+		PhanSo sumFrac;
+		sumFrac.tu = 0;
+		sumFrac.mau = 1;
+		for (int i = 0; i < n; ++i)
+			sumFrac = sumFractions(sumFrac, ps[i]);
+		cout << "Tong cua cac phan so la: ";
+		printFraction(sumFrac);
 
 		delete[]ps;
 	}
