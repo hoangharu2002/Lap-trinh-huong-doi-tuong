@@ -95,6 +95,8 @@ int getGCD(int a, int b) {
 	return a;
 }
 
+
+
 bool checkFraction(PhanSo p) {
 	if (p.mau == 0)
 		return false;
@@ -163,7 +165,12 @@ int main() {
 	//Chuong trinh 2
 	//Viet chuong trinh cho phep nhap mot day phan so. Cai dat ham tinh tong cac phan so va tim phan so lon nhat.
 	{
+		int n;
+		cout << "Hay nhap so luong phan tu cua mang phan so: ";
+		cin >> n;
+		PhanSo* ps = new PhanSo[n];
 
+		delete[]ps;
 	}
 	cout << "\n\n";
 	system("pause");
