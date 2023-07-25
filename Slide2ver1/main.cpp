@@ -95,6 +95,12 @@ int getGCD(int a, int b) {
 	return a;
 }
 
+bool checkFraction(PhanSo p) {
+	if (p.mau == 0)
+		return false;
+	return true;
+}
+
 void reduceFraction(PhanSo &p) {
 	if (p.tu * p.mau > 0) {
 		if (p.tu < 0)
