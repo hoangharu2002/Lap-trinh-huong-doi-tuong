@@ -157,53 +157,51 @@ PhanSo maxFractions(PhanSo maxFrac, PhanSo ps) {
 		return ps;
 	return maxFrac;
 }
-
-
 //Ham chuong trinh 2
 
 
 int main() {
 	//Chuong trinh 1
 	//Viet chuong trinh nhap vao 2 ma tran. Tinh tong, hieu, tich hai ma tran da nhap va in ket qua ra man hinh.
-	//{
-	//	Matrix A, B;
-	//	//Khoi tao ma tran A
-	//	cout << "Nhap so hang va so cot cua ma tran: ";
-	//	cin >> A.m >> A.n;
-	//	createMatrix(A);
-	//	getMatrixData(A);
+	{
+		Matrix A, B;
+		//Khoi tao ma tran A
+		cout << "Nhap so hang va so cot cua ma tran: ";
+		cin >> A.m >> A.n;
+		createMatrix(A);
+		getMatrixData(A);
 
-	//	//Khoi tao ma tran B
-	//	cout << "Nhap so hang va so cot cua ma tran: ";
-	//	cin >> B.m >> B.n;
-	//	createMatrix(B);
-	//	getMatrixData(B);
+		//Khoi tao ma tran B
+		cout << "Nhap so hang va so cot cua ma tran: ";
+		cin >> B.m >> B.n;
+		createMatrix(B);
+		getMatrixData(B);
 
-	//	//Tong cua hai ma tran
-	//	cout << "Tong cua hai ma tran tren:\n";
-	//	if (A.m != B.m || A.n != B.n)
-	//		cout << "Khong the tinh tong hai ma tran nay!\n";
-	//	else
-	//		printMatrix(sumMatrixes(A, B));
+		//Tong cua hai ma tran
+		cout << "Tong cua hai ma tran tren:\n";
+		if (A.m != B.m || A.n != B.n)
+			cout << "Khong the tinh tong hai ma tran nay!\n";
+		else
+			printMatrix(sumMatrixes(A, B));
 
-	//	//Hieu cua hai ma tran
-	//	cout << "Hieu cua hai ma tran tren:\n";
-	//	if (A.m != B.m || A.n != B.n)
-	//		cout << "Khong the tinh hieu hai ma tran nay!\n";
-	//	else
-	//		printMatrix(differMatrixes(A, B));
+		//Hieu cua hai ma tran
+		cout << "Hieu cua hai ma tran tren:\n";
+		if (A.m != B.m || A.n != B.n)
+			cout << "Khong the tinh hieu hai ma tran nay!\n";
+		else
+			printMatrix(differMatrixes(A, B));
 
-	//	//Tich cua hai ma tran
-	//	cout << "Tich cua hai ma tran la:\n";
-	//	if (A.n != B.m)
-	//		cout << "Khong the tinh tich cua hai ma tran nay!\n";
-	//	else
-	//		printMatrix(productTwoMatrixes(A, B));
+		//Tich cua hai ma tran
+		cout << "Tich cua hai ma tran la:\n";
+		if (A.n != B.m)
+			cout << "Khong the tinh tich cua hai ma tran nay!\n";
+		else
+			printMatrix(productTwoMatrixes(A, B));
 
-	//	//Gia phong vung nho
-	//	deleteMatrix(A);
-	//	deleteMatrix(B);
-	//}
+		//Gia phong vung nho
+		deleteMatrix(A);
+		deleteMatrix(B);
+	}
 	//Chuong trinh 2
 	//Viet chuong trinh cho phep nhap mot day phan so. Cai dat ham tinh tong cac phan so va tim phan so lon nhat.
 	{
