@@ -94,6 +94,21 @@ int getGCD(int a, int b) {
 	}
 	return a;
 }
+
+void reduceFraction(PhanSo &p) {
+	if (p.tu * p.mau > 0) {
+		if (p.tu < 0)
+			p.tu *= -1;
+		if (p.mau < 0)
+			p.mau *= -1;
+		if (p.tu == 0)
+			return;
+		int ucln = getGCD(p.tu, p.mau);
+		p.tu /= ucln;
+		p.mau /= ucln;
+		return;
+	}
+}
 //Ham chuong trinh 2
 
 
