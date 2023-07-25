@@ -151,6 +151,14 @@ PhanSo sumFractions(PhanSo ps1, PhanSo ps2) {
 	reduceFraction(sumFrac);
 	return sumFrac;
 }
+
+PhanSo maxFractions(PhanSo maxFrac, PhanSo ps) {
+	if (maxFrac.tu * ps.mau < ps.tu * maxFrac.mau)
+		return ps;
+	return maxFrac;
+}
+
+
 //Ham chuong trinh 2
 
 
@@ -203,16 +211,23 @@ int main() {
 		cout << "Hay nhap so luong phan tu cua mang phan so: ";
 		cin >> n;
 		PhanSo* ps = new PhanSo[n];
+		PhanSo maxFrac;
 		//Nhap cac phan tu trong mang phan so
 		for (int i = 0; i < n; ++i) {
 			cout << "Nhap phan so thu " << i << ":\n";
 			getFractionData(ps[i]);
+			if (i == 0)
+				maxFrac = ps[i];
+			else
+				maxFrac = maxFractions(maxFrac, ps[i]);
 		}
 		cout << "Xuat mang phan so:\n";
 		for (int i = 0; i < n; ++i) {
 			printFraction(ps[i]);
 		}
 		cout << endl;
+
+		//Tinh tong cac phan so
 		PhanSo sumFrac;
 		sumFrac.tu = 0;
 		sumFrac.mau = 1;
@@ -220,6 +235,11 @@ int main() {
 			sumFrac = sumFractions(sumFrac, ps[i]);
 		cout << "Tong cua cac phan so la: ";
 		printFraction(sumFrac);
+		cout << endl;
+
+		//Phan so lon nhat trong mang
+		cout << "Phan so lon nhat trong mang la: ";
+		printFraction(maxFrac);
 
 		delete[]ps;
 	}
