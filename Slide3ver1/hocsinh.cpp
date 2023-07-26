@@ -10,7 +10,7 @@ HocSinh::HocSinh() {
 HocSinh::HocSinh(const HocSinh& hs) {
 	this->dtoan = hs.dtoan;
 	this->dvan = hs.dvan;
-	this->mahs = new char[8] {'\0'};
+	this->mahs = new char[9] {'\0'};
 	for (int i = 0; hs.mahs[i] != '\0'; ++i)
 		this->mahs[i] = hs.mahs[i];
 	this->hoten = new char[50] {'\0'};
