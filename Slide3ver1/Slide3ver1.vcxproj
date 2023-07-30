@@ -129,9 +129,11 @@
   <ItemGroup>
     <ClCompile Include="hocsinh.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="sophuc.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="hocsinh.h" />
+    <ClInclude Include="sophuc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
