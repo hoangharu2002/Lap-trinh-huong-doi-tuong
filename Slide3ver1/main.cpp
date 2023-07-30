@@ -70,7 +70,12 @@ int main() {
 	//Viet dinh nghia lop DaGiac de bieu dien khai niem da giac trong mat phang voi cac ham thanh phan tuong tu lop TamGiac;
 	//Xay dung lop thoi gian voi thanh phan du lieu gom co gio, phut, giay va cac phep toan >>, << va ++, --.
 	{
-		TamGiac tg;
+		Diem a(0, 0), b(1, 0), c(0, 1);
+		TamGiac tg(a, b, c);
+		cout << "Tam giac vua tao la: ";
+		TamGiac::printTamGiac(tg);
+		tg.tinhtien(1, -1);
+		cout << "\nTham giac sau khi tinh tien: ";
 		TamGiac::printTamGiac(tg);
 	}
 	cout << endl;
