@@ -27,7 +27,7 @@ public:
 	void set(double x, double y);
 	double getX();
 	double getY();
-	void tinhtien(double x, double y);
+	void tinhtien(double x, double y); //tinh tien theo vector (x, y)
 	static void inputDiem(Diem& d);
 	static void printDiem(Diem d);
 };
