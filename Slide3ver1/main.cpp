@@ -16,6 +16,9 @@ int main() {
 		HocSinh hs2(hs1);
 		HocSinh::printHocSinh(hs2);
 	}*/
+
+
+
 	//Bai tap 2
 	//Xay dung lop bieu dien khai niem so phuc voi thanh phan du lieu gom: phan thuc va phan ao; Cac ham thanh phan gom:
 	//Nhap, xuat, dinh gia tri cho so phuc, cong, tru, nhan, chia hai so phuc.
@@ -34,6 +37,9 @@ int main() {
 		cout << "Tich cua hai so phuc la: "; SoPhuc::printSoPhuc(sp1 * sp2); cout << endl;
 		cout << "Thuong cua hai so phuc la: "; SoPhuc::printSoPhuc(sp1 / sp2); cout << endl;
 	}*/
+
+
+
 	//Bai tap 3
 	//Thiet lap lop bieu dien khai niem diem trong mat phang voi hai thanh phan du lieu: hoanh do va tung do;
 	//Viet cac phuong thuc thiet lap; Cac ham thanh phan cho phep thay doi noi dung cua diem; Lay hoanh do, tung do; Tinh tien;
@@ -54,6 +60,9 @@ int main() {
 	//	cout << "\n";
 	//	Diem::printDiem(d);
 	//}
+
+
+
 	//Bai tap 4
 	//Viet dinh nghia lop TamGiac de bieu dien khai niem tam giac trong mat phang voi cac phuong thuc thiet lap, huy bo (neu co);
 	//Cac ham thanh phan gom co: nhap, xuat, tinh tien, quay, phong to, thu nho va ve tam giac.
