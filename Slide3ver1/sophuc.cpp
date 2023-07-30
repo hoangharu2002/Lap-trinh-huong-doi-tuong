@@ -11,7 +11,11 @@ void SoPhuc::set(double a, double b) {
 }
 
 void SoPhuc::printSoPhuc(SoPhuc sp) {
-	cout << sp.thuc << "+" << sp.ao << "i";
+	cout << sp.thuc;
+	if (sp.ao >= 0)
+		cout << "+" << sp.ao << "i";
+	else
+		cout << sp.ao << "i";
 }
 
 SoPhuc SoPhuc::operator+(SoPhuc sp) {
