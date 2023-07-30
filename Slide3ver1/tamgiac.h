@@ -24,6 +24,7 @@ public:
 	static void inputTamGiac(TamGiac& tg);
 	static void printTamGiac(TamGiac& tg);
 	void tinhtien(double i, double j);	//Tinh tien theo vector (i, j)
+	void quay(Diem o, float alpha); //Phep quay (o, alpha) tam O mot goc alpha
 };
 
 #endif
