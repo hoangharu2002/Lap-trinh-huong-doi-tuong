@@ -12,7 +12,7 @@ public:
 		this->x = 0;
 		this->y = 0;
 	}
-	Diem(double x = 0, double y = 0) {
+	Diem(double x, double y) {
 		this->x = x;
 		this->y = y;
 	}
@@ -28,7 +28,7 @@ public:
 	double getX();
 	double getY();
 	void tinhtien(double x, double y);
-	static void inputDiem(Diem& d);
+	static void inputDiem(Diem d);
 	static void printDiem(Diem d);
 };
 
