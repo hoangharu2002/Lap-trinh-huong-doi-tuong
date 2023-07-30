@@ -32,8 +32,14 @@ int getGCD(int a, int b) {
 }
 
 int main() {
-    int a = 3, b = 6;
-    cout << "Is prime number: " << boolalpha << checkPrimeNumber(a) << "\n";
+    /*int a = 3, b = 6;
+    cout << "Is prime number: " << boolalpha << checkPrimeNumber(a) << "\n";*/
+
+    char helo[8] = "";
+    cin.get(helo, 8);
+    std::cout << helo;
+  
+    
     system("pause");
     return 0;
 }
