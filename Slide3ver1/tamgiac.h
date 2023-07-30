@@ -23,6 +23,7 @@ public:
 	~TamGiac() {}
 	static void inputTamGiac(TamGiac& tg);
 	static void printTamGiac(TamGiac& tg);
+	void tinhtien(double i, double j);	//Tinh tien theo vector (i, j)
 };
 
 #endif
