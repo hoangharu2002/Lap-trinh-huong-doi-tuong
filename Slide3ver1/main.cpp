@@ -49,6 +49,10 @@ int main() {
 		//Kiem tra ham get
 		cout << "\nToa do x: " << d.getX();
 		cout << "\nToa do y: " << d.getY();
+		//Kiem tra ham tinhtien
+		d.tinhtien(-1, 1);
+		cout << "\n";
+		Diem::printDiem(d);
 	}
 	cout << endl;
 	system("pause");

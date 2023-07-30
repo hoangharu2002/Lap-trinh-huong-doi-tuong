@@ -28,7 +28,7 @@ public:
 	double getX();
 	double getY();
 	void tinhtien(double x, double y);
-	static void inputDiem(Diem d);
+	static void inputDiem(Diem& d);
 	static void printDiem(Diem d);
 };
 

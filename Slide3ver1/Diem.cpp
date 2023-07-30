@@ -22,7 +22,7 @@ void Diem::printDiem(Diem d) {
 	cout << "(" << d.x << "," << d.y << ")" << " ";
 }
 
-void Diem::inputDiem(Diem d) {
+void Diem::inputDiem(Diem& d) {
 	cout << "Nhap toa do diem: ";
 	cin >> d.x >> d.y;
 }

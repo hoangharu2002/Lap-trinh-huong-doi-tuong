@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Diem.cpp" />
     <ClCompile Include="hocsinh.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="sophuc.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="diem.h" />
     <ClInclude Include="hocsinh.h" />
     <ClInclude Include="sophuc.h" />
   </ItemGroup>

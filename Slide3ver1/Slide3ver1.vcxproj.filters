@@ -24,12 +24,18 @@
     <ClCompile Include="sophuc.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="Diem.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="hocsinh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="sophuc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="diem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
