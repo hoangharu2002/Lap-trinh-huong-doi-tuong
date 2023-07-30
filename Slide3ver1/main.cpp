@@ -31,6 +31,7 @@ int main() {
 		cout << "Tong cua hai so phuc la: "; SoPhuc::printSoPhuc(sp1 + sp2); cout << endl;
 		cout << "Hieu cua hai so phuc la: "; SoPhuc::printSoPhuc(sp1 - sp2); cout << endl;
 		cout << "Tich cua hai so phuc la: "; SoPhuc::printSoPhuc(sp1 * sp2); cout << endl;
+		cout << "Thuong cua hai so phuc la: "; SoPhuc::printSoPhuc(sp1 / sp2); cout << endl;
 	}
 	system("pause");
 	return 0;
