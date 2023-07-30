@@ -9,20 +9,20 @@ private:
 	double thuc, ao;
 public:
 	SoPhuc() {
-		thuc = 0;
-		ao = 0;
+		this->thuc = 0;
+		this->ao = 0;
 	}
 	SoPhuc(double a, double b) {
-		thuc = a;
-		ao = b;
+		this->thuc = a;
+		this->ao = b;
 	}
 	SoPhuc(const SoPhuc& sp) {
-		thuc = sp.thuc;
-		ao = sp.ao;
+		this->thuc = sp.thuc;
+		this->ao = sp.ao;
 	}
 	~SoPhuc() {
-		thuc = 0;
-		ao = 0;
+		this->thuc = 0;
+		this->ao = 0;
 	}
 	static void getInput(SoPhuc& sp);
 	static void printSoPhuc(SoPhuc sp);

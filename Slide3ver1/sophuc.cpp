@@ -28,3 +28,11 @@ SoPhuc SoPhuc::operator*(SoPhuc sp) {
 	SoPhuc tich(this->thuc * sp.thuc - this->ao * sp.ao, this->thuc * sp.ao + this->ao * sp.thuc);
 	return tich;
 }
+
+SoPhuc SoPhuc::operator/(SoPhuc sp) {
+	SoPhuc thuong;
+	double tich_lh = sp.thuc * sp.thuc + sp.ao * sp.ao;
+	thuong.thuc = this->thuc / tich_lh * sp.thuc + this->ao /tich_lh * sp.ao;
+	thuong.ao = this->thuc / tich_lh * sp.ao - this->ao / tich_lh * sp.thuc;
+	return thuong;
+}
