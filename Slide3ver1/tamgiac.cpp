@@ -13,3 +13,9 @@ void TamGiac::printTamGiac(TamGiac& tg) {
 	Diem::printDiem(tg.c);
 	cout << "\b)";
 }
+
+void TamGiac::tinhtien(double i, double j) {
+	this->a.tinhtien(i, j);
+	this->b.tinhtien(i, j);
+	this->c.tinhtien(i, j);
+}
