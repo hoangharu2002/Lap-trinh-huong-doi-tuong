@@ -75,7 +75,7 @@ int main() {
 		cout << "Tam giac vua tao la: ";
 		TamGiac::printTamGiac(tg);
 		tg.tinhtien(1, -1);
-		cout << "\nTham giac sau khi tinh tien: ";
+		cout << "\nTam giac sau khi tinh tien: ";
 		TamGiac::printTamGiac(tg);
 	}
 	cout << endl;
