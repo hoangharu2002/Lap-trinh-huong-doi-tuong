@@ -38,21 +38,29 @@ int main() {
 	//Thiet lap lop bieu dien khai niem diem trong mat phang voi hai thanh phan du lieu: hoanh do va tung do;
 	//Viet cac phuong thuc thiet lap; Cac ham thanh phan cho phep thay doi noi dung cua diem; Lay hoanh do, tung do; Tinh tien;
 	//Nhap, xuat mot diem; Ham ve diem trong che do do hoa;
+	//{
+	//	Diem d;
+	//	//Kiem tra ham input
+	//	Diem::inputDiem(d);
+	//	Diem::printDiem(d);
+	//	//Kiem tra ham set
+	//	d.set(2, 3);
+	//	Diem::printDiem(d);
+	//	//Kiem tra ham get
+	//	cout << "\nToa do x: " << d.getX();
+	//	cout << "\nToa do y: " << d.getY();
+	//	//Kiem tra ham tinhtien
+	//	d.tinhtien(-1, 1);
+	//	cout << "\n";
+	//	Diem::printDiem(d);
+	//}
+	//Bai tap 4
+	//Viet dinh nghia lop TamGiac de bieu dien khai niem tam giac trong mat phang voi cac phuong thuc thiet lap, huy bo (neu co);
+	//Cac ham thanh phan gom co: nhap, xuat, tinh tien, quay, phong to, thu nho va ve tam giac.
+	//Viet dinh nghia lop DaGiac de bieu dien khai niem da giac trong mat phang voi cac ham thanh phan tuong tu lop TamGiac;
+	//Xay dung lop thoi gian voi thanh phan du lieu gom co gio, phut, giay va cac phep toan >>, << va ++, --.
 	{
-		Diem d;
-		//Kiem tra ham input
-		Diem::inputDiem(d);
-		Diem::printDiem(d);
-		//Kiem tra ham set
-		d.set(2, 3);
-		Diem::printDiem(d);
-		//Kiem tra ham get
-		cout << "\nToa do x: " << d.getX();
-		cout << "\nToa do y: " << d.getY();
-		//Kiem tra ham tinhtien
-		d.tinhtien(-1, 1);
-		cout << "\n";
-		Diem::printDiem(d);
+
 	}
 	cout << endl;
 	system("pause");
