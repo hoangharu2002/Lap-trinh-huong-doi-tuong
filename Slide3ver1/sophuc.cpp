@@ -14,3 +14,7 @@ void SoPhuc::printSoPhuc(SoPhuc sp) {
 	cout << sp.thuc << "+" << sp.ao << "i";
 }
 
+SoPhuc SoPhuc::operator+(SoPhuc sp) {
+	SoPhuc tong(this->thuc + sp.thuc, this->ao + sp.ao);
+	return tong;
+}
