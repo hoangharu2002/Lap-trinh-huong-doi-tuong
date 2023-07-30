@@ -18,3 +18,9 @@ SoPhuc SoPhuc::operator+(SoPhuc sp) {
 	SoPhuc tong(this->thuc + sp.thuc, this->ao + sp.ao);
 	return tong;
 }
+
+SoPhuc SoPhuc::operator-(SoPhuc sp) {
+	SoPhuc hieu(this->thuc - sp.thuc, this->ao - sp.ao);
+	return hieu;
+}
+
