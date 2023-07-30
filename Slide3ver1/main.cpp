@@ -2,6 +2,7 @@
 #include "hocsinh.h"
 #include "sophuc.h"
 #include "diem.h"
+#include "tamgiac.h"
 using namespace std;
 
 int main() {
@@ -69,7 +70,8 @@ int main() {
 	//Viet dinh nghia lop DaGiac de bieu dien khai niem da giac trong mat phang voi cac ham thanh phan tuong tu lop TamGiac;
 	//Xay dung lop thoi gian voi thanh phan du lieu gom co gio, phut, giay va cac phep toan >>, << va ++, --.
 	{
-
+		TamGiac tg;
+		TamGiac::printTamGiac(tg);
 	}
 	cout << endl;
 	system("pause");

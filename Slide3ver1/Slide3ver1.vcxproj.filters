@@ -27,6 +27,9 @@
     <ClCompile Include="Diem.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="tamgiac.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="hocsinh.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="diem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tamgiac.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -131,11 +131,13 @@
     <ClCompile Include="hocsinh.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="sophuc.cpp" />
+    <ClCompile Include="tamgiac.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="diem.h" />
     <ClInclude Include="hocsinh.h" />
     <ClInclude Include="sophuc.h" />
+    <ClInclude Include="tamgiac.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
