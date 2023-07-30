@@ -24,3 +24,7 @@ SoPhuc SoPhuc::operator-(SoPhuc sp) {
 	return hieu;
 }
 
+SoPhuc SoPhuc::operator*(SoPhuc sp) {
+	SoPhuc tich(this->thuc * sp.thuc - this->ao * sp.ao, this->thuc * sp.ao + this->ao * sp.thuc);
+	return tich;
+}
