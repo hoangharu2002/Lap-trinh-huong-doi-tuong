@@ -36,7 +36,7 @@ SoPhuc SoPhuc::operator*(SoPhuc sp) {
 SoPhuc SoPhuc::operator/(SoPhuc sp) {
 	SoPhuc thuong;
 	double tich_lh = sp.thuc * sp.thuc + sp.ao * sp.ao;
-	thuong.thuc = this->thuc / tich_lh * sp.thuc + this->ao /tich_lh * sp.ao;
-	thuong.ao = this->thuc / tich_lh * sp.ao - this->ao / tich_lh * sp.thuc;
+	thuong.thuc = sp.thuc / tich_lh * this->thuc + sp.ao /tich_lh * this->ao;
+	thuong.ao = sp.thuc / tich_lh * this->ao - sp.ao / tich_lh * this->thuc;
 	return thuong;
 }
