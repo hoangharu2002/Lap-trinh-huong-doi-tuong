@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdio.h>
+#include "date.h"
 using namespace std;
 
 void getArrayNumber(int* arr, int n) {
@@ -241,6 +242,24 @@ int main() {
 		cout << "Tich cua hai phan so: " << a * b << '\n';
 		cout << "THuong cua hai phan so: " << a / b << '\n';
 	}*/
+	//Bai tap 4
+	//a. Viet chuong trinh nhap vao mot ngay. Tim ngay ke tiep va xuat ket qua.
+	/*{
+		Date today;
+		cout << "Nhap ngay thang nam: ";
+		cin >> today;
+		while (!checkToday(today)) {
+			cout << "Ngay vua nhap khong hop le! Vui long nhap lai: ";
+			cin >> today;
+		}
+		cout << "Ngay thang nam vua nhap la: ";
+		cout << today;
+		cout << "\nNgay tiep theo se la: " << getNextday(today);
+	}*/
+	//b. Viet chuong trinh nhap ho ten, diem toan, diem van cua mot hoc sinh. Tinh diem trung binh va xuat ket qua.
+	{
+
+	}
 	cout << "\n";
 	system("pause");
 	return 0;
