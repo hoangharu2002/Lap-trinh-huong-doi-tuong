@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <stdio.h>
 #include "date.h"
 using namespace std;
@@ -132,6 +133,21 @@ PhanSo operator/(PhanSo a, PhanSo b) {
 	rutgonPS(thuong);
 	return thuong;
 }
+
+typedef struct HocSinh {
+	char* hoten;
+	float dtoan, dvan;
+};
+
+void initHS(HocSinh& hs) {
+	hs.hoten = new char[50] {'\0'};
+	hs.dtoan = 0;
+	hs.dvan = 0;
+}
+
+void destroyHS(HocSinh& hs) {
+	delete[]hs.hoten;
+}
 	
 int main() {
 	//nhap 4 so nguyen va xuat cac gia tri vua nhap
@@ -258,7 +274,14 @@ int main() {
 	}*/
 	//b. Viet chuong trinh nhap ho ten, diem toan, diem van cua mot hoc sinh. Tinh diem trung binh va xuat ket qua.
 	{
-
+		HocSinh hs;
+		initHS(hs);
+		cout << "Nhap thong tin hoc sinh!\n";
+		cout << "Ho va ten: "; cin.getline(hs.hoten, 50, '\n');
+		cout << "Diem toan: "; cin >> hs.dtoan;
+		cout << "Diem van: "; cin >> hs.dvan;
+		cout << "Diem trung binh cua hoc sinh " << hs.hoten << " la: " << setprecision(2) << hs.dtoan / 2 + hs.dvan / 2;
+		destroyHS(hs);
 	}
 	cout << "\n";
 	system("pause");
